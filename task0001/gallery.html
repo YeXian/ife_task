@@ -1,10 +1,197 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8" />
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>作品页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	
+    <div id="header">
+        <div>
+            <h1 class="header-logo">YourLOGO</h1>
+            <ul class="header-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blog.html">文章</a></li>
+                <li><a href="gallery.html">作品</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </div>
+        <a href="https://github.com/"><img class="icon" src="img/icon-github.png" alt=""></a>       
+    </div>
+    <div id="content">
+        <div class="gallery-content clearfix">
+            <!-- gallery页面主内容区 -->
+            <div class="gallery-main">
+                <div class="gallery-tab">
+                    <a class="all" href="">ALL</a><a class="js" href="">JavaScript Util Functions</a><a class="ui" href="">UI Components</a><a class="fw" href="">Framework</a><a class="app" href="">Applications</a>
+                </div>
+                <!-- 瀑布流标签区域 -->
+                <div class="gallery-waterfall clearfix">
+                    <div class="half-container clearfix">
+                        <div class="wide-box">
+                            <img src="img/gallery-1.jpg" alt="">
+                            <div class="text-box text-box-j">
+                                <h2>这是一个大标题</h2>
+                                <p>自适应的内容区自适应的内容区自适应的内容区自适应的内容区自适应的内容区自适应的内容区自适应的内容区自适应的内容区</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="img/gallery-2.jpg" alt="">
+                                <div class="text-box text-box-a">
+                                    <h2>标题</h2>
+                                    <p>文本本文本文本文本文本文本文本文本文本文本</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/gallery-2.jpg" alt="">
+                                <div class="text-box text-box-j">
+                                    <h2>标题</h2>
+                                    <p>文本文本文本文本文本文本文本文本文</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <img src="img/gallery-3.jpg" alt="">
+                                <div class="text-box text-box-f">
+                                    <h2>标题</h2>
+                                    <p>文文本文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/gallery-3.jpg" alt="">
+                                <div class="text-box text-box-u">
+                                    <h2>标题</h2>
+                                    <p>文本文本文本文本文本文本文本文本文本文本文本</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <li>
+                            <img src="img/gallery-2.jpg" alt="">
+                            <div class="text-box text-box-u">
+                                <h2>标题</h2>
+                                <p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/gallery-2.jpg" alt="">
+                            <div class="text-box text-box-j">
+                                <h2>标题</h2>
+                                <p>文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/gallery-2.jpg" alt="">
+                            <div class="text-box text-box-a">
+                                <h2>标题</h2>
+                                <p>文本文本文本文本文</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <img src="img/gallery-3.jpg" alt="">
+                            <div class="text-box text-box-a">
+                                <h2>标题</h2>
+                                <p>文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/gallery-2.jpg" alt="">
+                            <div class="text-box text-box-f">
+                                <h2>标题</h2>
+                                <p>文本文本文本文本文本</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a class="gallery-more">
+                    <img src="img/click-more.png" alt=""> 点击查看更多
+                </a>
+            </div>
+            <!-- gallery页面边栏区 -->
+            <div class="gallery-side">
+                <div class="m-search">
+                    <form action="" class="clearfix">
+                        <input type="text" value="Keywords">
+                        <button type="submit">GO</button>
+                    </form>
+                </div>
+                <div class="m-ranklist">
+                    <h2>人气排行榜</h2>
+                    <ol>
+                        <li><span class="mark">1</span><span class="percentage-box"><span class="percentage" style="width: 100%;"></span></span> ui.tree</li>
+                        <li><span class="mark">2</span><span class="percentage-box"><span class="percentage" style="width: 80%;"></span></span> util.trim</li>
+                        <li><span class="mark">3</span><span class="percentage-box"><span class="percentage" style="width: 60%;"></span></span> app.todo</li>
+                        <li><span class="mark">4</span><span class="percentage-box"><span class="percentage" style="width: 40%;"></span></span> ui.tab</li>
+                        <li><span class="mark">5</span><span class="percentage-box"><span class="percentage" style="width: 20%;"></span></span> util.addClass</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <ul class="footer-menu">
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="/blog.html">文章</a></li>
+            <li><a href="/gallery.html">作品</a></li>
+            <li><a href="/about.html">关于</a></li>
+        </ul>
+        <div class="footer-nav clearfix">
+            <dl>
+                <dt>学习资料</dt>
+                <dd><a href="">连接1</a></dd>
+                <dd><a href="">连接2</a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+            </dl>
+            <dl>
+                <dt>友情链接</dt>
+                <dd><a href="">慕课网</a></dd>
+                <dd><a href="http://study.163.com/">网易云课堂</a></dd>
+                <dd><a href="">百度前端技术学院</a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+            </dl>
+            <dl>
+                <dt>帮助中心</dt>
+                <dd><a href="">Google</a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+            </dl>
+            <dl>
+                <dt>意见反馈</dt>
+                <dd><a href="">没有</a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+            </dl>
+            <dl>
+                <dt>联系我们</dt>
+                <dd><a href="">匿名</a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+            </dl>
+        </div>
+        <div class="footer-logo">
+            <p>版权信息</p>
+            <a href="https://github.com/"><img src="img/icon-github.png" alt=""></a>
+        </div>
+    </div>
 </body>
 </html>
