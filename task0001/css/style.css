@@ -1,4 +1,7 @@
-    body {min-width: 980px;}
+    body {
+        min-width: 980px;
+        background-color: #eeeeee;
+    }
     #header {
         position: relative;
         height: 80px; 
@@ -39,9 +42,6 @@
         #header .icon {
             display: none;
         }
-    }
-    #content {
-        background-color: #eeeeee; 
     }
     .banner {
         position: relative; 
@@ -518,4 +518,73 @@
         display: inline-block;
         background-color: #522a5c;
         height: 100%;
+    }
+    .about-content {
+        position: relative;
+        width: 980px;
+        margin: 100px auto 25px;
+        padding-bottom: 100px;
+    }
+    .about-content .bg-left {
+        position: absolute;
+        width: 487px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+    }
+    .about-content .bg-right {
+        position: absolute;
+        width: 488px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #fff;
+    }
+    .about-main {
+        position: relative;
+    }
+    .about-main img {
+        display: block;
+        margin: 20px auto 0;
+    }
+    .about-main .head-pic{
+        position: relative;
+        bottom: 70px;
+        margin-bottom: -70px;
+    }
+    .about-main .text-box {
+        position: relative;
+        width: 310px;
+        margin-left: 525px;
+        margin-top: 20px;
+        font: 14px/1.7 "宋体";
+    }
+    .about-main .title {
+        position: absolute;
+        left: -190px;
+        font: 20px "宋体";
+    }
+    .about-main .text-box .introduce {
+        text-indent: 2em;
+    }
+    .about-main .tag {
+        margin-top: 20px;
+    }
+    .about-main .tag > div {
+        position: absolute;
+        left: -70px;
+        width: 60px;
+        text-align: center;
+        font-size: 12px;
+        border: 5px solid #eee;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+    .about-main .tag > h2 {
+        text-indent: 20px;
+    }
+    .about-main .tag > p {
+        text-indent: 20px;
+        font-size: 12px;
     }
