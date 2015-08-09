@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>getElementsByClassName</title>
+</head>
+<body>
+	<div id="example">
+  		<p id="p1" class="aaa bbb"/>
+		<p id="p2" class="aaa ccc"/>
+		<p id="p3" class="bbb ccc"/>
+	</div>
+	<script>
+	//一个兼容低版本浏览器的getElementsByClassName函数，参数为element和ClassName
+	//传入一个element元素和ClassName样式的类名，多个ClassName则以空格分隔。
+	function getElementsByClassName(element, ClassName) {
+		//如果浏览器支持getElementsByClassName，则返回浏览器默认方法。
+		if (element.getElementsByClassName) {
+			return element.getElementsByClassName(ClassName);
+		}
+		//基于空格将传入的ClassName分隔成子字符串数组，每个元素代表一个类名
+		ClassName = ClassName.split(' ');
+		//获取element下所有元素节点,这是一个数组
+		var elements = element.getElementsByTagName('*');
+		//创建一个results数组，用于保存符合对应类名要求的元素节点。
+		var results = [];
+		//遍历保存在elements中的每个元素节点
+		for (var i = 0; i < elements.length; i++) {
+			//取出元素节点的类属性值，前后加上空格，保存在elesClassName中
+			var elesClassName = (' ' + elements[i].className + ' ');
+			//定义一个标记，初始值为1，表示true
+			var flag = 1;
+			for (var j = 0; j < ClassName.length; j++) {
+				//查询元素的类属性值中是否有对应的类名
+				//如果匹配不上则将标记设为0，表示false，并跳出循环
+				if (elesClassName.indexOf(' ' + ClassName[j] + ' ') == -1) {
+					flag = 0;
+					break;
+				}
+			}
+			//经过查询匹配flag仍为 1 ，则表示该元素是符合要求的元素。
+			//将该元素添加到results数组中保存起来。
+			if (flag) {
+				results.push(elements[i]);
+			}
+		}
+		return results;	
+	}
+	//以下是应用
+	var example = document.getElementById('example');
+	var a = getElementsByClassName(example, 'aaa');
+	var b = getElementsByClassName(example, 'bbb ccc');
+	var c = getElementsByClassName(example, 'ccc bbb');
+	console.log(a);
+	console.log(b);
+	console.log(c);
+	</script>
+</body>
+</html>
