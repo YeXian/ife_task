@@ -15,10 +15,10 @@
     }
     .header-logo {
         position: absolute;
-        font: 25px/1.5 "黑体";
-        color: #fff;
         bottom: 0;
         left: 0;
+        font: 25px/1.5 "黑体";
+        color: #fff;
     }
     .header-menu {
         position: absolute;
@@ -26,17 +26,33 @@
         right: 50px;
     }
     .header-menu li {
-        display: inline;
-        margin-left: 28px;
+        display: inline-block;
+        margin-left: 24px;
+    }
+    .header-menu li:hover {
+        margin-left: 22px;
+        background-color: #eee;
+        border-radius: 8px;
+        transform: scale(1.6, 1.25);
     }
     .header-menu li a {
+        display: inline-block;
+        margin: 2px 2px 0 2px;
         font: 14px "宋体";
         color: #fff;
+    }
+    .header-menu li:hover a {
+        transform: scale(0.625, 0.8);
+        font-weight: 700;
+        color: #522a5c;
     }
     #header .icon {
         position: absolute;
         right: 10px;
         bottom: 0;
+    }
+    #header .icon:hover {
+        transform: scale(1.15) translateY(-3px);
     }
     @media screen and (max-width: 980px) {
         #header .icon {
@@ -53,34 +69,35 @@
         position: absolute; 
         bottom: 0; 
         left: 50%; 
-        margin-left: 130px;
         box-sizing: border-box; 
+        margin-left: 130px;
         width: 360px; 
         padding: 10px 10px 30px; 
-        background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.15) 75%, transparent);
         font: 12px "宋体"; 
-        color: #fff;
         text-indent: 2em;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.15) 75%, transparent);
+        color: #fff;
+        
     }
     .banner-text > h2 {
-        font-size: 14px; 
         margin-bottom: 12px;
+        font-size: 14px; 
         text-align: right;
     }
     .banner-text > p {
         line-height: 1.5; 
     }
     .index-column {
+        overflow: hidden;
         width: 980px;
         margin: 10px auto 110px;
-        overflow: hidden;
     }
     .index-column > div {
         float: left;
         width: 320px;
-        background-color: #fff;
         padding-bottom: 9999px;
         margin-bottom: -9999px;
+        background-color: #fff;
     }
     .index-column > div + div {
         margin-left: 10px;
@@ -92,9 +109,9 @@
         margin: 10px;
     }
     .index-column p {
+        margin: 15px 30px 25px;
         font: 12px/1.7 "宋体";
         text-indent: 2em;
-        margin: 15px 30px 25px;
     }
     .clearfix:after {
         content: "."; 
@@ -109,20 +126,21 @@
         background-color: #fff;
     }
     .self-introduction .photo {
+        display: block;
         position: relative;
         bottom: 50px;
-        display: block;
-        border-radius: 50%;
-        border:1px solid #eee;
         margin: 0 auto;
         width: 160px;
         height: 160px;
+        border:1px solid #eee;
+        border-radius: 50%;
+        box-shadow: 0 0 5px 5px #eee;
     }
     .self-introduction h2 {
-        font: 20px "Century Gothic";
-        color: #000;
-        text-align: center;
         margin-bottom: 30px;
+        font: 20px "Century Gothic";
+        text-align: center;
+        color: #000;
     }
     .self-introduction p {
         width: 600px;
@@ -304,6 +322,7 @@
     }
     .m-item a:hover {
         border-left-color: purple;
+        transform: scale(1.03, 1) translate(-3px, 0);
     }
     .m-calendar {
         margin-top: 10px;
@@ -332,6 +351,7 @@
         background-color: purple;
         color: #fff;
         cursor: pointer;
+        transform:scale(1.1);
     }
     .m-tags {
         margin-top: 10px;
@@ -547,11 +567,14 @@
     .about-main img {
         display: block;
         margin: 20px auto 0;
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px #eee;
     }
     .about-main .head-pic{
         position: relative;
         bottom: 70px;
         margin-bottom: -70px;
+        box-shadow: none;
     }
     .about-main .text-box {
         position: relative;

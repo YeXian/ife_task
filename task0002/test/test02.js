@@ -31,7 +31,7 @@ function cloneObject(src) {
                 result[key] = src[key];
                 continue;
             }
-            result[key] = cloneObject(src[key]);
+            result[key] = arguments.callee(src[key]);
         }
     }
     return result;

@@ -10,5 +10,6 @@
  6. forEach遍历数组，执行函数
  7. 获取对象第一层元素数量,Object.keys()
  8. 用正则表达式判断手机号码 与 电子邮箱
- 9. addClass函数实现对element添加样式
+ 9. 添加、移除样式，判断同级元素，获取元素在窗口的位置
  10. 兼容低版本浏览器，实现getElementsByClassName 
+ 11. 不直接document.querySelector的情况下，实现一个简单的Query
