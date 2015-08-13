@@ -4,7 +4,7 @@ function uniqArray(arr) {
     var array = arr.concat();
     for (var i = 0; i < array.length; i++) {
         var index = i + 1;
-        while (index != -1){
+        while (index != -1) {
             index = array.indexOf(array[i], index);
             if (index != -1) {
                 array.splice(index, 1);

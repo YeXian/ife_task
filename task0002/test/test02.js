@@ -27,10 +27,12 @@ function cloneObject(src) {
     }
     for (var key in src) {
         if (src.hasOwnProperty(key)) {
+            //如果属性是标准类型，直接拷贝
             if (src[key] == null || typeof src[key] != 'object' ) {
                 result[key] = src[key];
                 continue;
             }
+            //如果属性为引用类型，则递归，进入下一层拷贝。
             result[key] = arguments.callee(src[key]);
         }
     }

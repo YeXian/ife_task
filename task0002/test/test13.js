@@ -1,3 +1,7 @@
+function each(arr, fn) {
+    var array = [];
+    array.forEach.call(arr, fn);
+}
 // 实现一个简单的Query，传入参数为字符串，应用在最下方
 function $(selector) {
     //caller变量指向函数的调用者，全局下调用则caller指向document
@@ -53,26 +57,60 @@ function $(selector) {
         }
     }
 }
-//应用
-// 可以通过id获取DOM对象，通过#标示，例如
-var element1 = $('#id1'); // 返回id为adom的DOM对象
 
-// 可以通过tagName获取DOM对象，例如
-var element2 = $('a'); // 返回第一个<a>对象
-
-// 可以通过样式名称获取DOM对象，例如
-var element3 = $('.class1'); // 返回第一个样式定义包含classa的对象
-
-// 可以通过attribute匹配获取DOM对象，例如
-var element4 = $('[data-log]'); // 返回第一个包含属性data-log的对象
-var element5 = $('[data-time=2015]'); // 返回第一个包含属性data-time且值为2015的对象
-
-// 可以通过简单的组合提高查询便利性，例如
-var element6 = $('#id1 .efg'); // 返回id为adom的DOM所包含的所有子节点中，第一个样式定义包含classa的对象
-
-//还可以在指定的element下查询元素，例如
-var element7 = $.call(element1, '.efg');
-
-for (var i = 1; i < 8; i++) {
-    console.log(window['element' + i]);
+// 给一个element绑定一个针对event事件的响应，响应函数为listener
+function addEvent(element, event, listener) {
+    if (!!element.addEventListener) {
+        element.addEventListener(event, listener, !1);
+    }
+    else {
+        element.attachEvent('on' + event, listener);
+    }
 }
+// 移除element对象对于event事件发生时执行listener的响应
+function removeEvent(element, event, listener) {
+    if (!!element.removeEventListener) {
+        element.removeEventListener(event, listener, !1);
+    }
+    else {
+        element.detachEvent('on' + evenet, listener);
+    }
+}
+
+$.on = function (selector, event, listener) {
+    addEvent($(selector), event, listener);
+}
+$.un = function (selector, event, listener) {
+    removeEvent($(selector), event, listener);
+}
+// 实现对click事件的绑定
+$.click = function (selector, listener) {
+    $.on(selector, 'click', listener);
+}
+// 实现对于按Enter键时的事件绑定
+// 可以在事件函数listener 外再包一层判断keyup值的函数。
+$.enter = function (selector, listener) {
+    $.on(selector, 'keyup', outerListener);
+    function outerListener (event) {
+        if (event.keyCode == '13') {
+            return listener(event);
+        }
+    }
+}
+// 事件代理：$.delegate($('#list'), 'li', 'click', clickListener);
+$.delegateEvent = function (element, tag, eventName, listener) {
+    $.on(element, eventName, innerListener);
+    function innerListener (event) {
+        if (event.target.nodeName.toLowerCase() == tag) {
+            return listener(event);
+        }
+    }
+}
+
+//事件函数
+function handler(event) {
+    alert('123');
+}
+
+$.delegateEvent('#list', 'a', 'click', handler);
+

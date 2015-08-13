@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>元素淡出动画效果</title>
+	<style>
+	div{ width:200px; height: 200px; background-color: red; }
+	</style>
+</head>
+<body>
+	<div ></div>
+	<script>
+	var div = document.getElementsByTagName('div')[0];
+	var div2 = document.getElementsByTagName('div')[1];
+	function fadeout (element) {
+		var opacity = 1;
+		var step = function () {
+			opacity = opacity - (1/100);
+			if (opacity > 0) {
+				element.style['opacity'] = opacity + '';
+			}
+			else {
+				element.style['opacity'] = 0 + '';
+				clearInterval(intervalID);
+			}
+		}
+		var intervalID = setInterval(step, 10);
+	}
+	fadeout(div);
+	</script>
+</body>
+</html>
