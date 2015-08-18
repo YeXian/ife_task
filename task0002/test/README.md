@@ -15,3 +15,4 @@
  11. 不直接document.querySelector的情况下，实现一个简单的Query
  12. 元素淡出动画效果
  13. 给Query添加事件相关方法
+ 14. 判断浏览器，获取、设置cookie
