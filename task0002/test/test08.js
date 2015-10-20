@@ -10,7 +10,7 @@ function isMobilePhone(phone) {
     var pattern = /^0?(13\d|15[012356789]|18[0-9]|17[678]|14[57])\d{8}$/;
     return pattern.test(phone);
 }
-var phone = '158756324512';
+var phone = '15875632451';
 console.log(isMobilePhone(phone));
 var mail = 'yesdazsad@qq.com';
 console.log(isEmail(mail));
